@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 # Load model
-model = joblib.load("C:\my _app\model.pkl")
+model = joblib.load("model.pkl")
 
 st.title("🏡 House Price Prediction App")
 
@@ -18,3 +18,4 @@ if st.button("Predict Price"):
     input_data = [[bedrooms, bathrooms, sqft]]
     prediction = model.predict(input_data)
     st.success(f"💰 Estimated House Price: ${prediction[0]:,.2f}")
+
